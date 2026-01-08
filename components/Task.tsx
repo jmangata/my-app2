@@ -30,6 +30,11 @@ const newtask = {id: Date.now().toString(),
     complete:false
 }
 console.log(newtask)
+//ajouter la nouvelle tache au tableau de tache 
+setDataTasks([...datatasks,newtask])
+
+//vider le formulaire 
+settache('')
 
  
 
