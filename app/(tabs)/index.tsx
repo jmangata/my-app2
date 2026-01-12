@@ -1,14 +1,22 @@
 
-import Task from '@/components/Task'
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import Compteur from '@/components/Compteur';
+import CompteurRedux from '@/components/CompteurRedux';
+import ModifierCompteur from '@/components/ModifierCompteur';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Provider } from "react-redux";
+import { store } from '../store/store';
 
 const Index = () => {
   return (
+    <Provider store = {store}>
     <View style={styles.content}>
-     <Task/>
-
+     
+      <Compteur/>
+      <CompteurRedux/>
+      <ModifierCompteur/>
     </View>
+    </Provider>
   )
 }
 

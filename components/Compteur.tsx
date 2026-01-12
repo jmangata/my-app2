@@ -4,13 +4,12 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 const Compteur = () => {
     //declaration de la variable nombre 
-const incrementation = (second) => { third 
-    console.log('incrémententation du compteur',nombre)
+const incrementation = () => {
+    console.log('incrémententation du compteur', nombre)
     setnombre(nombre + 1)
 }
-
  const decrementation = () => {
-    console.log('décrémentation du compteur',nombre)
+    console.log('-',nombre)
     setnombre (nombre - 1)   
 }   
 const reset = () => {
@@ -21,10 +20,10 @@ const reset = () => {
     return (
         <View style={styles.comp}>
             <Text>Compteur:{nombre}</Text>
-            <Button title="Incrémentation" onPress={incrementation}/>
+            <Button title="+" onPress={incrementation}/>
             
-            <Button title="Décrémentation"onPress={decrementation}/>
-            <Button title="Reset" onPress={reset}/>
+            <Button title="-"onPress={decrementation}/>
+            <Button title="0" onPress={reset}/>
         </View>
     )
 }
